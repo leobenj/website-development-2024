@@ -1,0 +1,11 @@
+body {
+    color: rgb(rgb(253, 147, 54));
+    background-color: rgb(171, 58, 232);
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 20px;
+}
+
+.btn { background-color: rgb(246, 124, 10); color: rgb(13, 0, 3);}
