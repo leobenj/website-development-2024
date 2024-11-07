@@ -1,20 +1,35 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    
+    height: 100%;
+   font-family: arial,sans-serif;
+   height: fit-content;
+   box-sizing: border-box;
+  
     
 }
-.header {
+header {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 30px;
-    font-size: 35px;
+    padding: 10px;
+    font-size: 24px;
 }
+
+h1 {
+  text-align: center;
+  color: #e7851d;
+}
+
+h2 {
+  text-align: center;
+  color: #e7851d;
+}
+
 .navbar {
-    background-color: #333;
+    background-color: #e5801a;
     overflow: hidden;
     text-align: center;
+    
 }
 .navbar a {
     color: white;
@@ -23,15 +38,19 @@ body {
     text-decoration: none;
 }
 .navbar a:hover {
-    background-color: #555;
+    background-color: #3e3937;
+  
 }
 
 .vertical-nav  {
     width: 200px;
-    background-color: #f4f4f4;
+    background-color: #fcce9c;
     float: left;
     padding-top: 10px;
-    height: 100vh;}
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
 
 .vertical-nav a {
     display: block;
@@ -41,14 +60,38 @@ body {
     text-align: left;
 }
 .vertical-nav a:hover {
-    background-color: #ddd;
+    background-color: #545454;
+
+    
 }
+a:link {
+    color: #20201f;
+  }
+  a:visited {
+    color: #461d11;
+  }
+  a:focus {
+    color: #bc2fe0;
+  }
+  a:hover {
+    color: #0099cc;
+  }
+  a:active {
+    color: #ff0000;
+  }
 .content {
-    width: 80%;
+    width: 60%;
     margin-left: 200px;
     padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    
+    
 }
-.footer {
+footer {
     background-color: black;
     color: white;
     text-align: center;
@@ -56,4 +99,48 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
+    color: #f06a17;
 }
+
+.wrapper {
+    display: flex;
+  }
+  
+  .wrapper > div {
+    flex: 1;
+    text-align: center;
+  }
+ 
+  .center-flex {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: 5vh; 
+    text-align: center; 
+  }
+  
+  .progress-container {
+    width: 50%; 
+    background-color: #f9c581;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 1px; 
+  }
+  
+  .progress-bar {
+    width: 70%; 
+    height: 100%;
+    background-color: #ef8310;
+    transition: width 0.3s;
+  }
+
+  .progress-bar::after {
+    content: "70%";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
