@@ -1,0 +1,466 @@
+body {
+    background-color: #3e3a3a;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: blueviolet;
+    height: 100vh;
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Custom style for DPS heading */
+.dps-heading {
+  color: #ff4500; /* A bright orange-red */
+  font-family: 'Arial Black', sans-serif; /* Bold and modern font */
+  font-size: 2.5rem; /* Increase the size */
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #ff4500; /*Matches text color */
+  text-decoration-thickness: 3px; /* Thickness of the underline */
+  text-underline-offset: 5px; /* Distance between the text and underline */
+ 
+}
+
+.section-dps p.red-paragraph {
+  color: #ff4500;
+}
+
+
+/* DPS Button */
+.custom-dps-btn {
+  background-color: #ff4500; /* Bright orange-red */
+  border-color: #ff4500;
+  color: #fff; /* White text */
+}
+
+.custom-dps-btn:hover {
+  background-color: #e03e00; /* Darker orange-red on hover */
+  border-color: #e03e00;
+}
+
+.custom-dps-btn:active {
+  color: inherit; /* Inherit the text color from body */
+}
+
+
+
+.tank-heading {
+  color: #1e90ff; /* Dodger blue */
+  font-family: 'Arial Black', sans-serif; /* Bold and modern font */
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #1e90ff; /* Matches text color */
+  text-decoration-thickness: 3px; /* Thickness of the underline */
+  text-underline-offset: 5px; /* Distance between the text and underline */
+}
+
+.section-dps p.blue-paragraph {
+  color: #1e90ff;
+}
+
+
+
+/* TANK Button */
+.custom-tank-btn {
+  background-color: #1e90ff; /* Dodger blue */
+  border-color: #1e90ff;
+  color: #fff;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.custom-tank-btn:hover {
+  background-color: #187bcd; /* Darker blue on hover */
+  border-color: #187bcd;
+}
+
+.custom-tank-btn:active {
+  color: inherit; /* Inherit the text color from body */
+}
+
+
+
+
+/* Custom style for HEALER heading */
+.healer-heading {
+  color: #32cd32; /* Lime green */
+  font-family: 'Arial Black', sans-serif; /* Bold and modern font */
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #32cd32; /* Matches text color */
+  text-decoration-thickness: 3px; /* Thickness of the underline */
+  text-underline-offset: 5px; /* Distance between the text and underline */
+}
+
+.section-dps p.green-paragraph {
+  color: rgb(24, 201, 24);
+}
+
+.custom-healer-btn {
+  background-color: #32cd32; /* A custom green shade */
+  border-color: #32cd32;    /* Match the border color to the button */
+  color: #fff;             /* White text for good contrast */
+}
+
+.custom-healer-btn:hover {
+  background-color: #45a049; /* Slightly darker shade for hover effect */
+  border-color: #45a049;    /* Match border on hover */
+}
+
+
+.image-container {
+  padding: 15px;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional: Add rounded corners to images */
+}
+
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px; /* Adjust the vertical positioning as needed */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Align to center */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Semi-transparent black background */
+  color: white; /* Ensure the text is visible */
+  padding: 10px 20px; /* Add padding for a nice effect */
+  border-radius: 5px; /* Rounded corners */
+  display: inline-block; /* Fit the background to the text */
+  text-align: center; /* Center-align text inside the banner */
+}
+
+.carousel-caption h5, 
+.carousel-caption p {
+    font-weight: bold;
+}
+
+
+
+
+
+.resizable-image {
+  max-width: 30%; /* Ensures image takes up only 30% of its container's width */
+  height: auto; /* Maintains aspect ratio */
+  flex-shrink: 1; /* Ensures the image shrinks as needed within the flex container */
+}
+
+.text-section {
+  max-width: 50%; /* Optional: limit text width */
+}
+
+
+
+.text-section ul {
+  list-style-type: none; /* Remove default list bullets */
+  padding-left: 0; /* Remove left padding */
+}
+
+.text-section ul li {
+  position: relative; /* To position the arrows correctly */
+  padding-left: 25px; /* Add space for the arrow */
+  font-size: 1.25rem; /* Match the font size */
+}
+
+.text-section ul li::before {
+  content: "\00BB"; /* Unicode for » (right angle quote) */
+  position: absolute;
+  left: 0; /* Position the arrow to the left of the list item */
+  font-weight: bold; /* Bold the arrow for emphasis */
+  font-size: 1.25rem; /* Match the font size of the list text */
+  color: inherit; /* Inherit the color of the list item */
+}
+
+/*TANK SECTION /*
+
+/* Different text colors for each list item */
+.text-section ul li.warrior {
+  color: #CF2621; /* Ruby red color */
+}
+
+.text-section ul li.paladin {
+  color: #A8D2E6; /* Steel blue color */
+}
+
+.text-section ul li.dark-knight {
+  color: #D126CC; /* Purple color */
+}
+
+.text-section ul li.gunbreaker {
+  color: #796D30; /* Golden brown color */
+}
+
+ /* Target only elements inside the container with the ID "second-page" */
+ #third-page h1, #third-page p {
+  color: #4459C3; /* Tank blue color for heading and paragraph */
+}
+
+
+  /* Different colors for headings */
+  .dark-knight-heading {
+    color: #D126CC; /* Purple color */
+}
+
+/* Different colors for descriptions */
+.dark-knight-description {
+  color: #D126CC; /* Purple color */
+}
+
+.warrior-heading {
+  color: #ed342d; /* Ruby red color */
+}
+
+.warrior-description {
+  color: #ed342d; /* Ruby red color */
+}
+
+.paladin-heading {
+  color: #A8D2E6; /* Steel blue color */
+}
+
+.paladin-description {
+  color: #A8D2E6; /* Steel blue color */
+}
+
+.gunbreaker-heading {
+  color: #796D30; /* golden brown color */
+}
+
+.gunbreaker-description {
+  color: #796D30; /* golden brown color */
+}
+
+/* This CSS will only affect the image with class .responsive-image-third */
+.responsive-image-third {
+  width: 30%;           /* Makes the image responsive and shrinks with the page */
+  max-width: 100%;      /* Set a maximum width for the image to prevent it from getting too large */
+  height: auto;          /* Maintains the aspect ratio of the image */
+  object-fit: contain;   /* Ensures the image doesn't stretch or distort, it will shrink as needed */
+}
+
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  .responsive-image-third {
+      width: 80%;            /* Increase image size on smaller screens */
+      margin-top: 20px;      /* Add some spacing above the image */
+  }
+
+  .container-md {
+      padding-left: 15px;    /* Add padding on small screens */
+      padding-right: 15px;   /* Add padding on small screens */
+  }
+
+  .p-5 {
+      padding-top: 0px;      /* Remove extra padding on small screens */
+      padding-bottom: 0px;   /* Remove extra padding on small screens */
+  }
+
+  /* Change the layout of the text and image sections to be stacked */
+  .d-flex {
+      flex-direction: column;   /* Stack the content vertically on small screens */
+  }
+
+  .text-section {
+      order: 1;              /* Move the text section above the image */
+  }
+
+  .responsive-image-third {
+      order: 2;              /* Move the image below the text section */
+  }
+}
+
+/*HEALER SECTION /*
+
+/* Target only elements inside the container with the ID "fourth-page" */
+#fourth-page h1, #fourth-page p {
+  color: #346624; /* Healer color for heading and paragraph */
+}
+
+/* Different text colors for each list item */
+.text-section ul li.sage {
+  color: #80A0F0; /* Sage blue color */
+}
+
+.text-section ul li.white-mage {
+  color: #FFF0DC  /* white color */
+}
+
+.text-section ul li.astrologian {
+  color: #FFE74A; /* Yellow color */
+}
+
+.text-section ul li.scholar {
+  color: #8657FF; /* Purple color */
+}
+
+/* Different colors for headings */
+.sage-heading {
+  color: #80A0F0; /* Sage blue color */
+}
+
+/* Different colors for descriptions */
+.sage-description {
+  color: #80A0F0; /* Sage blue color */
+}
+
+.white-mage-heading {
+  color: #FFF0DC  /* white color */
+}
+
+.white-mage-description {
+  color: #FFF0DC  /* white color */
+}
+
+.astrologian-heading {
+  color: #FFE74A; /* Yellow color */
+}
+
+.astrologian-description {
+  color: #FFE74A; /* Yellow color */
+}
+
+.scholar-heading {
+  color: #8657FF; /* Purple color */
+}
+
+.scholar-description {
+  color: #8657FF; /* Purple color */
+}
+
+/* DPS SECTION /*
+
+/* Target only elements inside the container with the ID "fourth-page" */
+#second-page h1, #second-page p {
+  color: #e03e00; /* DPS color for heading and paragraph */
+}
+
+.column-heading-melee-heading {
+  color: #e03e00
+}
+.column-heading-caster-heading {
+  color: #e03e00
+}
+
+.column-heading-ranged-heading {
+  color: #e03e00
+}
+
+
+/* Different text colors for each list item */
+.text-section ul li.samurai {
+  color: #E46D04; /* samurai color */
+}
+
+.text-section ul li.ninja {
+  color: #AF1964  /* ninja color */
+}
+
+.text-section ul li.reaper {
+  color: #965A90; /* reaper color */
+}
+
+.text-section ul li.monk {
+  color: #dd9e16; /* monk color */
+}
+
+.text-section ul li.dragoon {
+  color: #4164CD; /* dragoon color */
+}
+
+.text-section ul li.viper {
+  color: #108210; /* viper color */
+}
+
+.text-section ul li.bard {
+  color: #91BA5E; /* bard color */
+}
+
+.text-section ul li.dancer {
+  color: #E2B0AF; /* dancer color */
+}
+
+.text-section ul li.machinist {
+  color: #6EE1D6; /* machinist color */
+}
+
+.text-section ul li.black-mage {
+  color: #A579D6; /* black mage color */
+}
+.text-section ul li.red-mage {
+  color: #E87B7B; /* red mage color */
+}
+.text-section ul li.pictomancer {
+  color: #FC92E1; /* pictomancer color */
+}
+.text-section ul li.summoner {
+  color: #2D9B78; /* summoner color */
+}
+
+/* Styling for the unordered list columns */
+.dps-lists {
+  display: flex;
+  justify-content: space-between; /* Distribute columns evenly */
+  gap: 30px; /* Space between columns */
+}
+
+.dps-lists div {
+  flex: 1; /* Allow each column to take equal space */
+}
+
+.dps-lists h4.column-heading {
+  font-size: 1.2rem; /* Make heading smaller */
+  margin-bottom: 10px; /* Space between heading and list */
+  color: inherit; /* Inherit the text color */
+  font-weight: bold; /* Optional: Make the heading bold */
+}
+
+.dps-lists ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove left padding */
+}
+
+.dps-lists ul li {
+  font-size: 1.1rem; /* Adjust text size for readability */
+  padding-left: 25px; /* Add padding for left side (space between text and arrow) */
+  position: relative; /* Allow for positioning the arrow */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.dps-lists ul li::before {
+  content: "\00bb"; /* Raquo (» arrow) symbol */
+  position: absolute; /* Position the arrow relative to the list item */
+  left: 0; /* Align it to the left of the list item */
+  top: 50%; /* Center the arrow vertically */
+  transform: translateY(-50%); /* Correct for any vertical misalignment */
+  font-size: 1.3rem; /* Adjust arrow size */
+  color: inherit;
+}
+
+/* Adjust layout for small screens (mobile) */
+@media (max-width: 768px) {
+  .dps-lists {
+    flex-direction: column;  /* Stack columns vertically on smaller screens */
+    gap: 20px; /* Reduce space between columns */
+  }
+
+  .dps-lists div {
+    flex: none; /* Let columns take full width on small screens */
+  }
+
+  .dps-lists h4.column-heading {
+    font-size: 1.1rem; /* Reduce font size of headings on smaller screens */
+    margin-bottom: 8px; /* Reduce space between heading and list */
+  }
+
+  .dps-lists ul li {
+    font-size: 1rem; /* Adjust text size for smaller screens */
+    padding-left: 20px; /* Reduce padding for list items */
+  }
+}
