@@ -3,7 +3,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: blueviolet;
+    color: rgb(219, 189, 107);
     height: 100vh;
     position: relative;
     font-family: Arial, sans-serif;
@@ -463,4 +463,155 @@ body {
     font-size: 1rem; /* Adjust text size for smaller screens */
     padding-left: 20px; /* Reduce padding for list items */
   }
+}
+
+
+
+/* Dark background */
+.background1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #1e1e1e; /* Darker background */
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Styling for balls */
+.background1 span {
+  position: absolute;
+  display: block;
+  width: 12px; /* Default small size */
+  height: 12px; /* Default small size */
+  border-radius: 50%;
+  background: currentColor;
+  animation: move 30s linear infinite;
+  box-shadow: 0 0 5px currentColor; /* Subtle glow */
+  opacity: 0.8; /* Reduced brightness */
+}
+
+/* Adjusting ball sizes */
+.background1 span.small {
+  width: 8px;
+  height: 8px;
+}
+
+.background1 span.medium {
+  width: 18px;
+  height: 18px;
+}
+
+.background1 span.large {
+  width: 50px;   /* Larger size */
+  height: 50px;  /* Larger size */
+  box-shadow: 0 0 12px currentColor; /* Larger glow */
+}
+
+/* Animation */
+@keyframes move {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(100vw, 100vh) rotate(360deg);
+  }
+}
+
+/* Gold and blue balls with less brightness */
+.background1 span:nth-child(1) {
+  color: #d4b670; /* Muted gold */
+  top: 10%;
+  left: 20%;
+  animation-duration: 22s;
+  animation-delay: -10s;
+}
+
+.background1 span:nth-child(2) {
+  color: #f1ce77; /* Muted blue */
+  top: 30%;
+  left: 50%;
+  animation-duration: 25s;
+  animation-delay: -15s;
+}
+
+.background1 span:nth-child(3) {
+  color: #d4b670; /* Muted gold */
+  top: 50%;
+  left: 70%;
+  animation-duration: 18s;
+  animation-delay: -20s;
+}
+
+.background1 span:nth-child(4) {
+  color: #f2e4bd; /* Muted blue */
+  top: 70%;
+  left: 30%;
+  animation-duration: 20s;
+  animation-delay: -25s;
+}
+
+.background1 span:nth-child(5) {
+  color: #d4b670; /* Muted gold */
+  top: 15%;
+  left: 85%;
+  animation-duration: 32s;
+  animation-delay: -8s;
+}
+
+.background1 span:nth-child(6) {
+  color: #f3cc78; /* Muted blue */
+  top: 40%;
+  left: 60%;
+  animation-duration: 40s;
+  animation-delay: -30s;
+}
+
+.background1 span:nth-child(7) {
+  color: #d4b670; /* Muted gold */
+  top: 60%;
+  left: 35%;
+  animation-duration: 45s;
+  animation-delay: -35s;
+}
+
+.background1 span:nth-child(8) {
+  color: #e9c178; /* Muted blue */
+  top: 25%;
+  left: 10%;
+  animation-duration: 50s;
+  animation-delay: -40s;
+}
+
+.background1 span:nth-child(9) {
+  color: #d4b670; /* Muted gold */
+  top: 20%;
+  left: 40%;
+  animation-duration: 27s;
+  animation-delay: -12s;
+}
+
+.background1 span:nth-child(10) {
+  color: #f9e3b8; /* Muted blue */
+  top: 35%;
+  left: 50%;
+  animation-duration: 33s;
+  animation-delay: -18s;
+}
+
+.background1 span:nth-child(11) {
+  color: #d4b670; /* Muted gold */
+  top: 45%;
+  left: 65%;
+  animation-duration: 21s;
+  animation-delay: -7s;
+}
+
+.background1 span:nth-child(12) {
+  color: #f5dfa6; /* Muted blue */
+  top: 55%;
+  left: 75%;
+  animation-duration: 36s;
+  animation-delay: -25s;
 }
