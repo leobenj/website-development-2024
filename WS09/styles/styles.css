@@ -11,6 +11,68 @@ body {
     padding: 0;
   }
 
+/* Custom dark grey background */
+.custom-dark-grey {
+  background-color: #333; /* Dark grey color */
+}
+
+/* Custom Gold Text Color */
+.text-gold {
+  color: #d4b670 !important; /* Gold color with !important to override other styles */
+}
+
+/* Ensuring gold text for active state */
+.nav-link.active {
+  color: #d4b670 !important;
+}
+
+
+/* Style the dropdown menu to be dark */
+.dropdown-menu {
+  background-color: #333 !important; /* Dark background */
+  border: none; /* Remove border */
+}
+
+/* Style the dropdown items */
+.dropdown-item {
+  color: #d4b670; /* Gold color for text */
+}
+
+/* Change dropdown item color on hover */
+.dropdown-item:hover {
+  background-color: #555; /* Darker hover effect */
+  color: white; /* Change text color on hover */
+}
+
+
+
+/* Custom gold button class */
+.btn-gold {
+  background-color: #d4b670; /* Gold background */
+  color: white; /* White text */
+  border: 2px solid #d4b670; /* Add a gold border */
+  padding: 10px 20px; /* Adjust padding */
+}
+
+.btn-gold:hover {
+  background-color: #c1a14f; /* Slightly darker gold on hover */
+  border-color: #c1a14f; /* Darker border on hover */
+}
+
+
+
+.classes-heading {
+  color: #C1A14F !important; /* golden brown color */
+}
+
+
+.ffxiv-container-heading {
+  color: #C1A14F !important; /* golden brown color */
+}
+
+
+
+
 /* Custom style for DPS heading */
 .dps-heading {
   color: #ff4500; /* A bright orange-red */
@@ -115,12 +177,28 @@ body {
 
 .image-container {
   padding: 15px;
+
 }
 .image-container img {
   width: 100%;
   height: auto;
   border-radius: 5px; /* Optional: Add rounded corners to images */
+
 }
+
+
+
+/* Make the background of the container and .bg-dark class transparent */
+.bg-dark {
+  background-color: transparent !important; /* Make the background transparent */
+}
+
+.bg-dark h1,
+.bg-dark p,
+.bg-dark a {
+  color: inherit; /* Keep text color as it is, e.g., white */
+}
+
 
 
 .carousel-caption {
@@ -463,6 +541,42 @@ body {
     font-size: 1rem; /* Adjust text size for smaller screens */
     padding-left: 20px; /* Reduce padding for list items */
   }
+}
+
+
+/* Different colors for headings */
+.samurai-heading {
+  color: #E46D04;
+}
+
+/* Different colors for descriptions */
+.samurai-description {
+  color: #E46D04; 
+}
+
+.ninja-heading {
+  color: #AF1964; 
+}
+
+.ninja-description {
+  color:#AF1964;
+  
+}
+
+.reaper-heading {
+  color: #965A90; 
+}
+
+.reaper-description {
+  color: #965A90; 
+}
+
+.monk-heading {
+  color: #dd9e16; 
+}
+
+.monk-description {
+  color: #dd9e16;
 }
 
 
