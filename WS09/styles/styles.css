@@ -11,78 +11,130 @@ body {
     padding: 0;
   }
 
-/* Custom dark grey background */
+/* Navbar tyylit*/
 .custom-dark-grey {
-  background-color: #333; /* Dark grey color */
+  background-color: #333; 
 }
 
-/* Custom Gold Text Color */
 .text-gold {
-  color: #d4b670 !important; /* Gold color with !important to override other styles */
-}
-
-/* Ensuring gold text for active state */
-.nav-link.active {
-  color: #d4b670 !important;
+  color: #d4b670 !important; 
 }
 
 
-/* Style the dropdown menu to be dark */
+.navbar-nav .nav-link {
+  position: relative; 
+  transition: all 0.3s ease;
+  color: gold; 
+}
+
+
+
+/* After pseudo-element for all navbar links, hieno boxi kun klikkaa linkkiä. ChatGPT auttoi tämän kehittämisessä kun sain idean */
+.navbar-nav .nav-link:after {
+  content: ''; /* Empty content, just a decorative element */
+  position: absolute;
+  bottom: 0; /* Place at the bottom of the link */
+  left: 0;
+  width: 100%; /* Full width of the link */
+  height: 2px; /* Height of the line */
+  background-color: gold; /* Default line color */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the after pseudo-element */
+.navbar-nav .nav-link:hover:after {
+  transform: scaleX(1); /* hieno viiva kun hoveraa */
+}
+
+/* linkkien tyylit */
+
+
+.navbar-nav .nav-link[href="second.html"]:active {
+  color: white;
+  background-color: crimson; /* vilahtaa boxina */
+}
+.navbar-nav .nav-link[href="second.html"]:after {
+  background-color: red; /* viivan väri */
+}
+
+
+.navbar-nav .nav-link[href="third.html"]:active {
+  color: white;
+  background-color: navy; /*vilahtaa boxina */
+}
+.navbar-nav .nav-link[href="third.html"]:after {
+  background-color: blue; /* viivan väri */
+}
+
+
+.navbar-nav .nav-link[href="fourth.html"]:active {
+  color: white;
+  background-color: forestgreen; /* boxin väri */
+}
+.navbar-nav .nav-link[href="fourth.html"]:after {
+  background-color: green; /* viivan väri */
+}
+
+
+/* Dropdown Menu */
 .dropdown-menu {
-  background-color: #333 !important; /* Dark background */
-  border: none; /* Remove border */
+  background-color: #333 !important;
+  border: none;
 }
 
-/* Style the dropdown items */
-.dropdown-item {
-  color: #d4b670; /* Gold color for text */
+.dropdown-menu .dropdown-item {
+  transition: all 0.3s ease;
+  color: #000;
+}
+.dropdown-menu .dropdown-item:hover {
+  color: white;
+  background-color: gold;
+  border-radius: 3px;
 }
 
-/* Change dropdown item color on hover */
-.dropdown-item:hover {
-  background-color: #555; /* Darker hover effect */
-  color: white; /* Change text color on hover */
+.dropdown-menu .dropdown-item:active {
+  color: white;
+  background-color: orange;
+  border-radius: 3px;
 }
 
 
-
-/* Custom gold button class */
+/* Custom kultainen buttoni */
 .btn-gold {
-  background-color: #d4b670; /* Gold background */
-  color: white; /* White text */
-  border: 2px solid #d4b670; /* Add a gold border */
-  padding: 10px 20px; /* Adjust padding */
+  background-color: #d4b670; 
+  color: white; 
+  border: 2px solid #d4b670; /* kultainen reunus */
+  padding: 10px 20px; 
 }
 
 .btn-gold:hover {
-  background-color: #c1a14f; /* Slightly darker gold on hover */
-  border-color: #c1a14f; /* Darker border on hover */
+  background-color: #c1a14f; /* tummempi kultainen hoveri */
+  border-color: #c1a14f; /* tummempi reunus hoveri väri */
 }
 
 
 
 .classes-heading {
-  color: #C1A14F !important; /* golden brown color */
+  color: #C1A14F !important; /* Index sivun Classes & Jobs otsikon väri override */
 }
 
 
 .ffxiv-container-heading {
-  color: #C1A14F !important; /* golden brown color */
+  color: #C1A14F !important; /* Index sivun ffxiv otsikon väri override */
 }
 
 
-
-
-/* Custom style for DPS heading */
+/* Custom väri jokaiselle DPS, Tank ja healer columnille index sivulla */
 .dps-heading {
-  color: #ff4500; /* A bright orange-red */
-  font-family: 'Arial Black', sans-serif; /* Bold and modern font */
-  font-size: 2.5rem; /* Increase the size */
+  color: #ff4500; 
+  font-family: 'Arial Black', sans-serif; 
+  font-size: 2.5rem; 
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: #ff4500; /*Matches text color */
-  text-decoration-thickness: 3px; /* Thickness of the underline */
-  text-underline-offset: 5px; /* Distance between the text and underline */
+  text-decoration: underline; /* alleviiva decoration */
+  text-decoration-color: #ff4500; 
+  text-decoration-thickness: 3px; /* alleviivan paksuus */
+  text-underline-offset: 5px; /* tekstin ja alleviivan välinen etäisyys */
  
 }
 
@@ -93,31 +145,32 @@ body {
 
 /* DPS Button */
 .custom-dps-btn {
-  background-color: #ff4500; /* Bright orange-red */
+  background-color: #ff4500; 
   border-color: #ff4500;
-  color: #fff; /* White text */
+  color: #fff; 
 }
 
 .custom-dps-btn:hover {
-  background-color: #e03e00; /* Darker orange-red on hover */
+  background-color: #e03e00; 
   border-color: #e03e00;
 }
 
 .custom-dps-btn:active {
-  color: inherit; /* Inherit the text color from body */
+  color: inherit; /* inherit jotta ottaa värin bodystä, 
+  muuttuu kultaiseksi reunat + teksti ja täyttö ottaa bodyn harmaan värin */
 }
 
 
 
 .tank-heading {
-  color: #1e90ff; /* Dodger blue */
-  font-family: 'Arial Black', sans-serif; /* Bold and modern font */
+  color: #1e90ff; 
+  font-family: 'Arial Black', sans-serif; 
   font-size: 2.5rem;
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: #1e90ff; /* Matches text color */
-  text-decoration-thickness: 3px; /* Thickness of the underline */
-  text-underline-offset: 5px; /* Distance between the text and underline */
+  text-decoration: underline; /* alleviiva decoraatio */
+  text-decoration-color: #1e90ff; 
+  text-decoration-thickness: 3px; /* viivan paksuus */
+  text-underline-offset: 5px; /* viivan ja tekstin etäisyys */
 }
 
 .section-dps p.blue-paragraph {
@@ -128,7 +181,7 @@ body {
 
 /* TANK Button */
 .custom-tank-btn {
-  background-color: #1e90ff; /* Dodger blue */
+  background-color: #1e90ff; 
   border-color: #1e90ff;
   color: #fff;
   border-style: solid;
@@ -136,12 +189,12 @@ body {
 }
 
 .custom-tank-btn:hover {
-  background-color: #187bcd; /* Darker blue on hover */
+  background-color: #187bcd; 
   border-color: #187bcd;
 }
 
 .custom-tank-btn:active {
-  color: inherit; /* Inherit the text color from body */
+  color: inherit; /* inherit tyylit */
 }
 
 
@@ -149,14 +202,14 @@ body {
 
 /* Custom style for HEALER heading */
 .healer-heading {
-  color: #32cd32; /* Lime green */
-  font-family: 'Arial Black', sans-serif; /* Bold and modern font */
+  color: #32cd32; 
+  font-family: 'Arial Black', sans-serif; 
   font-size: 2.5rem;
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: #32cd32; /* Matches text color */
-  text-decoration-thickness: 3px; /* Thickness of the underline */
-  text-underline-offset: 5px; /* Distance between the text and underline */
+  text-decoration: underline; /* alleviiva decoraatio */
+  text-decoration-color: #32cd32;
+  text-decoration-thickness: 3px; /* alleviivan paksuus */
+  text-underline-offset: 5px; /* alleviivan ja tekstin etäisyys */
 }
 
 .section-dps p.green-paragraph {
@@ -164,14 +217,14 @@ body {
 }
 
 .custom-healer-btn {
-  background-color: #32cd32; /* A custom green shade */
-  border-color: #32cd32;    /* Match the border color to the button */
-  color: #fff;             /* White text for good contrast */
+  background-color: #32cd32; 
+  border-color: #32cd32;    
+  color: #fff;            
 }
 
 .custom-healer-btn:hover {
-  background-color: #45a049; /* Slightly darker shade for hover effect */
-  border-color: #45a049;    /* Match border on hover */
+  background-color: #45a049; /* custom healer button, koska bootstrapin tummanvihreä ei miellyttänyt */
+  border-color: #45a049;    
 }
 
 
@@ -182,36 +235,36 @@ body {
 .image-container img {
   width: 100%;
   height: auto;
-  border-radius: 5px; /* Optional: Add rounded corners to images */
+  border-radius: 5px; 
 
 }
 
 
 
-/* Make the background of the container and .bg-dark class transparent */
+/*  containerin backgroundi on transparent */
 .bg-dark {
-  background-color: transparent !important; /* Make the background transparent */
+  background-color: transparent !important; 
 }
 
 .bg-dark h1,
 .bg-dark p,
 .bg-dark a {
-  color: inherit; /* Keep text color as it is, e.g., white */
+  color: inherit; /* pitää värin valkoisena vaikka läpinäkyvä container */
 }
 
 
 
 .carousel-caption {
   position: absolute;
-  bottom: 20px; /* Adjust the vertical positioning as needed */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Align to center */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Semi-transparent black background */
-  color: white; /* Ensure the text is visible */
-  padding: 10px 20px; /* Add padding for a nice effect */
-  border-radius: 5px; /* Rounded corners */
-  display: inline-block; /* Fit the background to the text */
-  text-align: center; /* Center-align text inside the banner */
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); /* alignaa keskelle */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); /* Semi-transparent musta backgroundi */
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  display: inline-block; 
+  text-align: center; 
 }
 
 .carousel-caption h5, 
@@ -221,109 +274,107 @@ body {
 
 
 
-
-
 .resizable-image {
-  max-width: 30%; /* Ensures image takes up only 30% of its container's width */
+  max-width: 30%; /* kuva ottaa 30% containerista */
   height: auto; /* Maintains aspect ratio */
   flex-shrink: 1; /* Ensures the image shrinks as needed within the flex container */
 }
 
 .text-section {
-  max-width: 50%; /* Optional: limit text width */
+  max-width: 50%; /* limit text width */
 }
 
 
 
 .text-section ul {
-  list-style-type: none; /* Remove default list bullets */
-  padding-left: 0; /* Remove left padding */
+  list-style-type: none; /* poistaa tavalliset bulletpointit */
+  padding-left: 0; /* poistaa vasemman paddinging */
 }
 
 .text-section ul li {
-  position: relative; /* To position the arrows correctly */
-  padding-left: 25px; /* Add space for the arrow */
-  font-size: 1.25rem; /* Match the font size */
+  position: relative; 
+  padding-left: 25px; 
+  font-size: 1.25rem; 
 }
 
 .text-section ul li::before {
-  content: "\00BB"; /* Unicode for » (right angle quote) */
+  content: "\00BB"; /* custom raquo arrow code \00BB, idea bootstrapista */
   position: absolute;
-  left: 0; /* Position the arrow to the left of the list item */
-  font-weight: bold; /* Bold the arrow for emphasis */
-  font-size: 1.25rem; /* Match the font size of the list text */
-  color: inherit; /* Inherit the color of the list item */
+  left: 0; /* positio nuolelle vasemmalla */
+  font-weight: bold; 
+  font-size: 1.25rem; 
+  color: inherit; /* ottaa lista itemin värin */
 }
 
 /*TANK SECTION /*
 
-/* Different text colors for each list item */
+/* eri värit jokaiselle lista itemille */
 .text-section ul li.warrior {
-  color: #CF2621; /* Ruby red color */
+  color: #CF2621; 
 }
 
 .text-section ul li.paladin {
-  color: #A8D2E6; /* Steel blue color */
+  color: #A8D2E6; 
 }
 
 .text-section ul li.dark-knight {
-  color: #D126CC; /* Purple color */
+  color: #D126CC; 
 }
 
 .text-section ul li.gunbreaker {
-  color: #796D30; /* Golden brown color */
+  color: #796D30; 
 }
 
- /* Target only elements inside the container with the ID "second-page" */
+ /* targetoi vain asioita kolmannen sivun containerissa ID "third-page" */
  #third-page h1, #third-page p {
-  color: #4459C3; /* Tank blue color for heading and paragraph */
+  color: #4459C3; 
 }
 
 
-  /* Different colors for headings */
+  /*tankki karusellin otsikon värit + description värit */
   .dark-knight-heading {
-    color: #D126CC; /* Purple color */
+    color: #D126CC; 
 }
 
-/* Different colors for descriptions */
 .dark-knight-description {
-  color: #D126CC; /* Purple color */
+  color: #D126CC; 
 }
 
 .warrior-heading {
-  color: #ed342d; /* Ruby red color */
+  color: #ed342d; 
 }
 
 .warrior-description {
-  color: #ed342d; /* Ruby red color */
+  color: #ed342d; 
 }
 
 .paladin-heading {
-  color: #A8D2E6; /* Steel blue color */
+  color: #A8D2E6; 
 }
 
 .paladin-description {
-  color: #A8D2E6; /* Steel blue color */
+  color: #A8D2E6; 
 }
 
 .gunbreaker-heading {
-  color: #796D30; /* golden brown color */
+  color: #796D30; 
 }
 
 .gunbreaker-description {
-  color: #796D30; /* golden brown color */
+  color: #796D30; 
 }
 
-/* This CSS will only affect the image with class .responsive-image-third */
+/* This CSS will only affect the image with class .responsive-image-third, ChatGPT auttoi tässä kohdassa, 
+jotta sain kuvan menemään tekstin alle */
 .responsive-image-third {
-  width: 30%;           /* Makes the image responsive and shrinks with the page */
-  max-width: 100%;      /* Set a maximum width for the image to prevent it from getting too large */
-  height: auto;          /* Maintains the aspect ratio of the image */
-  object-fit: contain;   /* Ensures the image doesn't stretch or distort, it will shrink as needed */
+  width: 30%;           
+  max-width: 100%;      /* Antaa kuvalle maksimi koon, jotta se ei suurene liikaa */ 
+  height: auto;          
+  object-fit: contain;   /* Pitää huolen että kuva ei veny tai vääristy ja pienenee tarpeen mukaan */
 }
 
 
-/* For screens smaller than 768px (mobile devices) */
+/* For screens smaller than 768px (mobile devices) ChatGPT auttoi kun kyselin miten kuvan saa pomppaamaan tekstin alle kun sivua pienentää */
 @media (max-width: 768px) {
   .responsive-image-third {
       width: 80%;            /* Increase image size on smaller screens */
@@ -356,67 +407,67 @@ body {
 
 /*HEALER SECTION /*
 
-/* Target only elements inside the container with the ID "fourth-page" */
+/* Tämä kohta tekee healer sivun containerin tekstistä vihreän ID "fourth-page" */
 #fourth-page h1, #fourth-page p {
-  color: #346624; /* Healer color for heading and paragraph */
+  color: #346624; 
 }
 
-/* Different text colors for each list item */
+/* Healer section listan värit */
 .text-section ul li.sage {
-  color: #80A0F0; /* Sage blue color */
+  color: #80A0F0; 
 }
 
 .text-section ul li.white-mage {
-  color: #FFF0DC  /* white color */
+  color: #FFF0DC 
 }
 
 .text-section ul li.astrologian {
-  color: #FFE74A; /* Yellow color */
+  color: #FFE74A; 
 }
 
 .text-section ul li.scholar {
-  color: #8657FF; /* Purple color */
+  color: #8657FF; 
 }
 
-/* Different colors for headings */
+/* healer sivun kuvakarusellin otsikko ja description värit */
 .sage-heading {
-  color: #80A0F0; /* Sage blue color */
+  color: #80A0F0;
 }
 
-/* Different colors for descriptions */
+
 .sage-description {
-  color: #80A0F0; /* Sage blue color */
+  color: #80A0F0; 
 }
 
 .white-mage-heading {
-  color: #FFF0DC  /* white color */
+  color: #FFF0DC  
 }
 
 .white-mage-description {
-  color: #FFF0DC  /* white color */
+  color: #FFF0DC  
 }
 
 .astrologian-heading {
-  color: #FFE74A; /* Yellow color */
+  color: #FFE74A; 
 }
 
 .astrologian-description {
-  color: #FFE74A; /* Yellow color */
+  color: #FFE74A; 
 }
 
 .scholar-heading {
-  color: #8657FF; /* Purple color */
+  color: #8657FF; 
 }
 
 .scholar-description {
-  color: #8657FF; /* Purple color */
+  color: #8657FF; 
 }
 
 /* DPS SECTION /*
 
-/* Target only elements inside the container with the ID "fourth-page" */
+/* Targetoi DPS containerin tekstin värin ID "second-page" */
 #second-page h1, #second-page p {
-  color: #e03e00; /* DPS color for heading and paragraph */
+  color: #e03e00; 
 }
 
 .column-heading-melee-heading {
@@ -431,86 +482,87 @@ body {
 }
 
 
-/* Different text colors for each list item */
+/* DPS sivun listan eri värit */
 .text-section ul li.samurai {
-  color: #E46D04; /* samurai color */
+  color: #E46D04; 
 }
 
 .text-section ul li.ninja {
-  color: #AF1964  /* ninja color */
+  color: #AF1964  
 }
 
 .text-section ul li.reaper {
-  color: #965A90; /* reaper color */
+  color: #965A90; 
 }
 
 .text-section ul li.monk {
-  color: #dd9e16; /* monk color */
+  color: #dd9e16; 
 }
 
 .text-section ul li.dragoon {
-  color: #4164CD; /* dragoon color */
+  color: #4164CD; 
 }
 
 .text-section ul li.viper {
-  color: #108210; /* viper color */
+  color: #108210; 
 }
 
 .text-section ul li.bard {
-  color: #91BA5E; /* bard color */
+  color: #91BA5E; 
 }
 
 .text-section ul li.dancer {
-  color: #E2B0AF; /* dancer color */
+  color: #E2B0AF; 
 }
 
 .text-section ul li.machinist {
-  color: #6EE1D6; /* machinist color */
+  color: #6EE1D6; 
 }
 
 .text-section ul li.black-mage {
-  color: #A579D6; /* black mage color */
+  color: #A579D6; 
 }
 .text-section ul li.red-mage {
-  color: #E87B7B; /* red mage color */
+  color: #E87B7B; 
 }
 .text-section ul li.pictomancer {
-  color: #FC92E1; /* pictomancer color */
+  color: #FC92E1; 
 }
 .text-section ul li.summoner {
-  color: #2D9B78; /* summoner color */
+  color: #2D9B78; 
 }
 
-/* Styling for the unordered list columns */
+/* unordered listan tyylit */
 .dps-lists {
   display: flex;
-  justify-content: space-between; /* Distribute columns evenly */
-  gap: 30px; /* Space between columns */
+  justify-content: space-between; /* tekee columnneista tasaiset  */
+  gap: 30px; /* columnien väliset välit */
 }
 
 .dps-lists div {
-  flex: 1; /* Allow each column to take equal space */
+  flex: 1; /* Antaa jokaisen yksittäisen columnin ottaa saman kokoisen tilan */
 }
 
 .dps-lists h4.column-heading {
-  font-size: 1.2rem; /* Make heading smaller */
-  margin-bottom: 10px; /* Space between heading and list */
-  color: inherit; /* Inherit the text color */
-  font-weight: bold; /* Optional: Make the heading bold */
+  font-size: 1.2rem; 
+  margin-bottom: 10px; /* Otsikon ja listan välinen väli */
+  color: inherit; 
+  font-weight: bold; /* bold otsikko */
 }
 
 .dps-lists ul {
-  list-style-type: none; /* Remove default bullet points */
-  padding-left: 0; /* Remove left padding */
+  list-style-type: none; /* pois default bulletpoint tyylit */
+  padding-left: 0; 
 }
 
 .dps-lists ul li {
-  font-size: 1.1rem; /* Adjust text size for readability */
-  padding-left: 25px; /* Add padding for left side (space between text and arrow) */
-  position: relative; /* Allow for positioning the arrow */
-  margin-bottom: 10px; /* Space between list items */
+  font-size: 1.1rem; 
+  padding-left: 25px; /* Lisää paddingia vasemmalle puolelle. (nuolen ja tekstin välinen väli)*/
+  position: relative; /* Nuolen positio */
+  margin-bottom: 10px; /* lista itemien väliset välit */
 }
 
+/* tykkäsin raquo tyylisestä nuolesta, joten kysyin tekoälyltä miten sen saisi unordered listaan, vaikka se onkin bootstrap elementti */
 .dps-lists ul li::before {
   content: "\00bb"; /* Raquo (» arrow) symbol */
   position: absolute; /* Position the arrow relative to the list item */
@@ -521,7 +573,8 @@ body {
   color: inherit;
 }
 
-/* Adjust layout for small screens (mobile) */
+/* Adjust layout for small screens (mobile), toinen suuri haaste oli saada kolmen eri ul kolumnin tekstit menemään nätisti allekkain joten 
+ChatGPT neuvoi samalla tavalla miten tein responsive-image-thirdin kohdalla */
 @media (max-width: 768px) {
   .dps-lists {
     flex-direction: column;  /* Stack columns vertically on smaller screens */
@@ -544,12 +597,12 @@ body {
 }
 
 
-/* Different colors for headings */
+/* DPS karusellin tekstien otsikko ja description värit */
 .samurai-heading {
   color: #E46D04;
 }
 
-/* Different colors for descriptions */
+
 .samurai-description {
   color: #E46D04; 
 }
@@ -580,33 +633,36 @@ body {
 }
 
 
+/* span elementin CSS, idean liikkuvista palloista sain kaverilta ja yhdessä ChatGPTn avulla tein erilaisen version */
 
-/* Dark background */
+/* tumma backgroundi */
 .background1 {
-  position: fixed;
+  position: fixed; /* pysyy paikoillaan, vaikka sivua vieritetään */
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: #1e1e1e; /* Darker background */
-  overflow: hidden;
-  z-index: -1;
+  background: #1e1e1e; 
+  overflow: hidden; /* estää pallojen näkymisen taustan ulkopuolelle */
+  z-index: -1; /* -1  varmistaa, että näkyy muiden elementtien taustalla */
 }
 
-/* Styling for balls */
+/* pallojen tyylit */
 .background1 span {
-  position: absolute;
+  position: absolute; /* Tässä jokainen <span> asetetaan absolute-asentoon, 
+  jotta se voidaan sijoittaa tarkasti mihin tahansa kohtaan taustalla */
   display: block;
-  width: 12px; /* Default small size */
-  height: 12px; /* Default small size */
+  width: 12px; /* pieni koko*/
+  height: 12px; /* pieni koko */
   border-radius: 50%;
   background: currentColor;
-  animation: move 30s linear infinite;
-  box-shadow: 0 0 5px currentColor; /* Subtle glow */
-  opacity: 0.8; /* Reduced brightness */
+  animation: move 30s linear infinite; /* määrittää, että pallo liikkuu jatkuvasti
+  tietyn animaation mukaan (kesto 30 sekuntia, lineaarinen liike) */
+  box-shadow: 0 0 5px currentColor; /* antaa värianimoinnin palloille*/
+  opacity: 0.8; /* pallojen läpinäkyvyyden säätöarvo */
 }
 
-/* Adjusting ball sizes */
+/* pallojen koot */
 .background1 span.small {
   width: 8px;
   height: 8px;
@@ -618,12 +674,14 @@ body {
 }
 
 .background1 span.large {
-  width: 50px;   /* Larger size */
-  height: 50px;  /* Larger size */
-  box-shadow: 0 0 12px currentColor; /* Larger glow */
+  width: 50px;  
+  height: 50px; 
+  box-shadow: 0 0 12px currentColor; 
 }
 
-/* Animation */
+/* Animaatio move luo liikettä, jossa pallo liikkuu näytön kulmasta toiseen (translate(100vw, 100vh)), 
+samalla pyörien 360 astetta (rotate(360deg)).
+Animaatio kestää 30 sekuntia ja toistuu loputtomasti */
 @keyframes move {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -633,9 +691,12 @@ body {
   }
 }
 
-/* Gold and blue balls with less brightness */
+/* nth-child valitsee kunkin pallon ja määrittää sen värin (color), 
+sijainnin (top, left), animaation keston (animation-duration) ja viiveen (animation-delay).
+Tämä luo eri nopeuksilla liikkuvia palloja, jotka alkavat eri aikaan ja liikkuvat satunnaisesti eri suuntiin. */
+
 .background1 span:nth-child(1) {
-  color: #d4b670; /* Muted gold */
+  color: #d4b670; 
   top: 10%;
   left: 20%;
   animation-duration: 22s;
@@ -643,7 +704,7 @@ body {
 }
 
 .background1 span:nth-child(2) {
-  color: #f1ce77; /* Muted blue */
+  color: #f1ce77; 
   top: 30%;
   left: 50%;
   animation-duration: 25s;
@@ -651,7 +712,7 @@ body {
 }
 
 .background1 span:nth-child(3) {
-  color: #d4b670; /* Muted gold */
+  color: #d4b670; 
   top: 50%;
   left: 70%;
   animation-duration: 18s;
@@ -659,7 +720,7 @@ body {
 }
 
 .background1 span:nth-child(4) {
-  color: #f2e4bd; /* Muted blue */
+  color: #f2e4bd; 
   top: 70%;
   left: 30%;
   animation-duration: 20s;
@@ -667,7 +728,7 @@ body {
 }
 
 .background1 span:nth-child(5) {
-  color: #d4b670; /* Muted gold */
+  color: #d4b670; 
   top: 15%;
   left: 85%;
   animation-duration: 32s;
@@ -675,7 +736,7 @@ body {
 }
 
 .background1 span:nth-child(6) {
-  color: #f3cc78; /* Muted blue */
+  color: #f3cc78; 
   top: 40%;
   left: 60%;
   animation-duration: 40s;
@@ -683,7 +744,7 @@ body {
 }
 
 .background1 span:nth-child(7) {
-  color: #d4b670; /* Muted gold */
+  color: #d4b670; 
   top: 60%;
   left: 35%;
   animation-duration: 45s;
@@ -691,7 +752,7 @@ body {
 }
 
 .background1 span:nth-child(8) {
-  color: #e9c178; /* Muted blue */
+  color: #e9c178; 
   top: 25%;
   left: 10%;
   animation-duration: 50s;
@@ -699,7 +760,7 @@ body {
 }
 
 .background1 span:nth-child(9) {
-  color: #d4b670; /* Muted gold */
+  color: #d4b670; 
   top: 20%;
   left: 40%;
   animation-duration: 27s;
@@ -707,7 +768,7 @@ body {
 }
 
 .background1 span:nth-child(10) {
-  color: #f9e3b8; /* Muted blue */
+  color: #f9e3b8; 
   top: 35%;
   left: 50%;
   animation-duration: 33s;
@@ -715,7 +776,7 @@ body {
 }
 
 .background1 span:nth-child(11) {
-  color: #d4b670; /* Muted gold */
+  color: #d4b670; 
   top: 45%;
   left: 65%;
   animation-duration: 21s;
@@ -723,7 +784,7 @@ body {
 }
 
 .background1 span:nth-child(12) {
-  color: #f5dfa6; /* Muted blue */
+  color: #f5dfa6; 
   top: 55%;
   left: 75%;
   animation-duration: 36s;
